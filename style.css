@@ -1,26 +1,184 @@
 @font-face {
-    font-family: 'Apercu Regular';
-    src: url(/fonts/apercu_regular_pro.otf);
+    font-family: 'Abril_Fatface';
+    src: url(/fonts/Abril_Fatface/AbrilFatface-Regular.ttf);
+    font-family: 'League_Gothic';
+    src: url(/fonts/League_Gothic/LeagueGothic-CondensedRegular.otf);
+    font-family: 'Noto_Serif';
+    src: url(/fonts/Noto_Serif/NotoSerif-Regular.ttf);
 }
 
 body {
     margin-top: 0px;
-    font-family: 'Apercu Regular', 'Tahoma', 'Arial', sans-serif;
+    font-family: 'Noto_Serif', 'Open Sans', 'Lato', 'Roboto';
     margin-left: auto;
     margin-right: auto;
     background-color: #FFC0CB;
     background-image: url('./images/imagename.png');
 }
-
-
-.topnav {
-    overflow: hidden;
-    font-family: 'Apercu Regular', 'Tahoma', 'Arial', sans-serif;
-}
   
 h1 {
+    font-family: 'Abril_Fatface';
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* BASIC CSS UTILITIES FOR HEADER/ NAVBAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+.navbar {
+    font-family: 'League_Gothic', 'Arial', 'sans-serif';
+    text-transform: capitalize;
+    }
+    
+a {
+    text-decoration: none;
+    }
+    
+li {
+    list-style: none;
+    }
+
+/* NAVBAR STYLING STARTS */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    }
+    
+.nav-links a {
+    color: #ffffff;
+    }
+    
+/* LOGO */
+
+.logo {
+    font-size: 32px;
+    }
+    
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    }
+    
+.menu li {
+    padding: 5px 14px;
+    }
+
+.menu { 
+    display:none;
+    position: absolute;
+    background-color: #000000;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0; 
+    }
+    
+.menu li:hover {
+    display: inline-block;
+    background-color:#000000;
+    transition: 0.3s ease;
+    }
+    
+.menu li + li {
+    margin-top: 12px;
+    }
+    
+input[type=checkbox]:checked ~ .menu{
+    display: block;
+    }
+
+.hamburger {
+    display: block;
+    }
+
+.dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+    }
+    
+.dropdown li:hover {
+    background-color: #4c9e9e;
+    }
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type=checkbox]{
+    display: none; 
+    } 
+    
+/*HAMBURGER MENU*/
+    .hamburger {
+        font-size: 24px;
+        user-select: none;
+    }
+    
+/* APPLYING MEDIA QUERIES FOR TABLET & DESKTOP VIEW */
+    
+    @media (min-width: 600px) {
+        .menu { 
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            right: 0;
+            left: 0;
+            text-align: center;
+            padding: 16px 0; 
+        }
+
+        .menu li:hover {
+            display: inline-block;
+            background-color:#000000;
+            transition: 0.3s ease;
+        }
+
+        .menu li + li {
+        margin-top: 12px;
+        }
+        
+        input[type=checkbox]:checked ~ .menu{
+            display: block;
+        }
+        
+        .hamburger {
+            display: block;
+        }
+        
+        .dropdown {
+            left: 50%;
+            top: 30px;
+            transform: translateX(35%);
+        }
+        
+        .dropdown li:hover {
+            background-color: #000000;
+        }
+    }
+
+    @media (min-width: 1025px) {            
+        
+    }
+
+/*Tablet screen size*/
+@media (min-width: 600px) {
+   
+  }
+
+/*Desktop screen size*/
+@media (min-width: 1025px) {
+   
+  }
