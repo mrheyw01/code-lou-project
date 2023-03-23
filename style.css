@@ -186,12 +186,9 @@ input[type=checkbox]{
   }
 
   /* MAIN HOMEPAGE SECTION STYLING */
-  .intro-area {
-    background-image: url('/images/HotSauce1_150dpi.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: auto;
-    color: #FFFFFF;
+  .intro-image {
+    position:absolute;
+    z-index:-1;
   }
   .h1-hero-headline {
     display: flex;
