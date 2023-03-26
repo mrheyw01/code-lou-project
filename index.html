@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +10,12 @@
 </head>
 <body>
     <header>
-    <nav title="navbar" class="navbar">
-        <!-- LOGO -->
-        <div class="logo">KAPF</div>
-        <!-- NAVIGATION MENU -->
-        <ul class="nav-links">
-            <!-- USING CHECKBOX HACK -->
-            <input type="checkbox" id="checkbox_toggle" />
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-            <!-- NAVIGATION MENUS -->
-            <div class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About Us</a></li>
-                <li><a href="/">Menu</a></li>
-            </div>
+        <ul class="menu">
+            <li class="logo"><a href="#">KAPF</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Menu</a></li>
+            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul>
     </nav>
     </header>
@@ -33,7 +26,7 @@
             <img src="/images/HotSauce1_150dpi_crop.jpg" class="intro-image" alt="Hot sauce bottle laying on napkins surrounded by peppers">    
             <h1 class="h1-hero-headline">KAPF HOT SAUCE</h1>
                 <div class="button-wrapper hero-cta">
-                    <a href="https://google.com"> TURN UP THE HEAT</a>
+                    <a href="#"> TURN UP THE HEAT</a>
                 </div>
                 </div>
         </article>
@@ -49,26 +42,41 @@
     <article class="menu-section">
 
         <h1 class="menu-hl">MENU</h1>
-        <p>This is body copy text.</p><br>
+        <p>Time to take your spice threshold up a notch. Explore our product offerings in the below sections.</p><br>
 
         <button class="accordion">HOT SAUCES</button>
         <div class="panel">
-            <p>Lorem ipsum...</p>
+            <p>
+                <img src="/images/HotSauce3_150dpi.jpg" class="strain13" alt="Picture of Strain 13 hot sauce">
+                <h1>STRAIN 13</h1>
+                <p>Lorem ipsum dolor sit amet. Qui omnis ratione 33 tempore perferendis non rerum 
+                    omnis est fuga doloremque est placeat harum sed incidunt adipisci! 
+                </p>
+                <h3>$14.99</h3><br><br>
+                
+                <img src="/images/sticker-mule-Jii9XIDjyJ4-unsplash copy.jpg" class="mulesauce" alt="Picture of Mule Sauce hot sauce">
+                <h1>MULE SAUCE</h1>
+                <p>Lorem ipsum dolor sit amet. Qui omnis ratione 33 tempore perferendis non rerum 
+                    omnis est fuga doloremque est placeat harum sed incidunt adipisci! 
+                </p>
+                <h3>$12.99</h3><br><br>
+            </p>
         </div>
         
         <button class="accordion">PEPPER SEEDS</button>
         <div class="panel">
-            <p>Lorem ipsum...</p>
+            <p>Pepper seeds to purchase coming soon!</p>
         </div>
         
         <button class="accordion">SPICE BLENDS</button>
         <div class="panel">
-            <p>Lorem ipsum...</p>
+            <p>Spice blends to purchase coming soon!</p>
         </div>
 
     </article>
 
-    <script src="main.js"></script>
+   
+    
 
     </main>
 
@@ -76,5 +84,6 @@
     Links??
    </footer>
 
+   <script src="main.js"></script>
 </body>
 </html>

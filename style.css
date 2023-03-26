@@ -1,27 +1,24 @@
 @font-face {
-    font-family: 'Abril_Fatface';
-    src: url(/fonts/Abril_Fatface/AbrilFatface-Regular.ttf);
-    font-family: 'League_Gothic';
-    src: url(/fonts/League_Gothic/LeagueGothic-CondensedRegular.otf);
-    font-family: 'Noto_Serif';
-    src: url(/fonts/Noto_Serif/NotoSerif-Regular.ttf);
+    font-family: 'Domine';
+    src: url(/fonts/Domine/Domine-VariableFont_wght.ttf);
+    font-family: 'Montserrat';
+    src: url(/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-family: 'Oswald';
+    src: url(/fonts/oswald/oswald-variablefont_wght.ttf);
 }
 
 body {
     margin-top: 0px;
-    font-family: 'Noto_Serif', 'Open Sans', 'Lato', 'Roboto';
     font-size: 18px;
     margin-left: auto;
     margin-right: auto;
     background-color: #000000;
-    background-image: url('./images/imagename.png');
 }
 
 p {
-    font-family: 'Noto_Serif', 'Open Sans', 'Lato', 'Roboto';
     font-size: 18px; 
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
 }
   
 a:visited {
@@ -29,7 +26,7 @@ a:visited {
   }
 
 h1 {
-    font-family: 'Abril_Fatface';
+    font-family: 'Domine';
     color: #ffffff;
     font-size: 32px;
     margin-top: 0px;
@@ -37,157 +34,78 @@ h1 {
     margin-right: auto;
 }
 
+h3 {
+    font-family: 'Oswald';
+}
+
 /* BASIC CSS UTILITIES FOR HEADER/ NAVBAR */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    }
-    
-.navbar {
-    font-family: 'League_Gothic', 'Avenir', 'Arial', 'sans-serif';
-    text-transform: capitalize;
-    }
-    
+    padding: 0;
+    margin: 0;
+}
+nav {
+    background: #000000;
+    padding: 0 15px;
+}
 a {
+    color: white;
     text-decoration: none;
-    }
-    
-li {
-    list-style: none;
-    }
-
-/* NAVBAR STYLING STARTS */
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #000000;
-    color: #ffffff;
-    }
-    
-.nav-links a {
-    color: #ffffff;
-    }
-    
-/* LOGO */
-
+}
+.menu {   
+    list-style-type: none;
+}
 .logo {
-    font-size: 32px;
-    }
-    
-/* NAVBAR MENU */
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 10px;
+    font-family: 'Oswald';
+}
+.item {
+    padding: 10px;
+}
+.item.button {
+    padding: 9px 5px;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+    color: #ccc;
+}
+
+/* MOBILE MENU */
 .menu {
     display: flex;
-    gap: 1em;
-    font-size: 18px;
-    }
-    
-.menu li {
-    padding: 5px 14px;
-    }
-
-.menu { 
-    display:none;
-    position: absolute;
-    background-color: #000000;
-    right: 0;
-    left: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu li a {
+    display: block;
+    padding: 15px 5px;
+}
+.menu li.subitem a {
+    padding: 15px;
+}
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+.item.button {
+    order: 2;
+}
+.item {
+    order: 3;
+    width: 100%;
     text-align: center;
-    padding: 16px 0; 
-    }
-    
-.menu li:hover {
-    display: inline-block;
-    background-color:#000000;
-    transition: 0.3s ease;
-    }
-    
-.menu li + li {
-    margin-top: 12px;
-    }
-    
-input[type=checkbox]:checked ~ .menu{
+    display: none;
+}
+.active .item {
     display: block;
-    }
+}
+.button.secondary { /* DIVIDER BETWEEN BUTTONS AND MENU LINKS (IF NEEDED) */
+    border-bottom: 1px #444 solid;
+}
 
-.hamburger {
-    display: block;
-    }
-
-.dropdown {
-    left: 50%;
-    top: 30px;
-    transform: translateX(35%);
-    }
-    
-.dropdown li:hover {
-    background-color: #4c9e9e;
-    }
-
-/* RESPONSIVE NAVBAR MENU STARTS */
-
-/* CHECKBOX HACK */
-
-input[type=checkbox]{
-    display: none; 
-    } 
-    
-/*HAMBURGER MENU*/
-    .hamburger {
-        font-size: 24px;
-        user-select: none;
-    }
-    
-/* APPLYING MEDIA QUERIES FOR TABLET & DESKTOP VIEW */
-    
-    @media (min-width: 600px) {
-        .menu { 
-            display: none;
-            position: absolute;
-            background-color: #000000;
-            right: 0;
-            left: 0;
-            text-align: center;
-            padding: 16px 0; 
-        }
-
-        .menu li:hover {
-            display: inline-block;
-            background-color:#000000;
-            transition: 0.3s ease;
-        }
-
-        .menu li + li {
-        margin-top: 12px;
-        }
-        
-        input[type=checkbox]:checked ~ .menu{
-            display: block;
-        }
-        
-        .hamburger {
-            display: block;
-        }
-        
-        .dropdown {
-            left: 50%;
-            top: 30px;
-            transform: translateX(35%);
-        }
-        
-        .dropdown li:hover {
-            background-color: #000000;
-        }
-    }
-
-    @media (min-width: 1025px) {            
-        
-    }
-
-/*Tablet screen size*/
+/* MEDIA QUERY FOR TABLET SCREEN SIZES */
 @media (min-width: 600px) {
     .h1-hero-headline {
         font-size: 3rem;
@@ -200,9 +118,63 @@ input[type=checkbox]{
     }
   }
 
+/* MEDIA QUERY FOR TABLET */
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+    }
+    /* BUTTON UP FROM TABLET SCREEN */
+    .menu li.button a {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
+    .h1-hero-headline {
+        font-size: 3rem;
+      }
+    .about-us {
+        font-size: 3rem;
+    }
+    .menu-hl {
+        font-size: 3rem;
+    }
+}
 
-/*Desktop screen size*/
-@media (min-width: 1025px) {
+/* MEDIA QUERY FOR DESKTOP */
+@media all and (min-width: 1025px) {
+    /* MENU STYLING */
+    .menu {
+        align-items: flex-start;     
+        flex-wrap: nowrap;
+        background: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+        position: relative;
+        display: block; 
+        width: auto;
+    }
+    .button {
+        order: 2;
+    }
+    .toggle {
+        display: none;
+    }
     .h1-hero-headline {
         font-size: 5rem;
       }
@@ -212,11 +184,9 @@ input[type=checkbox]{
     .menu-hl {
         font-size: 5rem;
     }
-  }
+}
 
-
-
-  /* MAIN HOMEPAGE SECTION STYLING */
+/* MAIN HOMEPAGE SECTION STYLING */
  
   .intro-image {
     background-size: cover;
@@ -226,7 +196,7 @@ input[type=checkbox]{
   }
   .h1-hero-headline {
     display: flex;
-    font-family: 'Abril_Fatface';
+    font-family: 'Domine';
     line-height: 1;
     width: 100%;
     justify-content: center;
@@ -237,14 +207,14 @@ input[type=checkbox]{
   .hero-cta {
     color: #ffffff;
     background-color: #000000;
-    border: 0.1rem solid #000000;
-    font-family: 'League_Gothic', 'Avenir', 'Arial', 'sans-serif';
+    font-family: 'Oswald', 'Avenir', 'Arial', 'sans-serif';
     padding: 1rem 1.2rem;
     border-radius: 0.375rem;
-    position: absolute;
-    top: 75%;
     font-size: 18px;
-    font-weight: 700;
+  }
+
+  .hero-cta:hover {
+    background-color: #803208;
   }
 
   .intro-fix {
@@ -252,7 +222,7 @@ input[type=checkbox]{
     text-align: center; 
   }
 
-  /* ABOUT US SECTION STYLING */
+/* ABOUT US SECTION STYLING */
   .about-us-section {
     background-color: #4A0A04;
     color: #ffffff;
@@ -268,7 +238,7 @@ input[type=checkbox]{
     max-width: 100%;
   }
 
-  /* MENU SECTION STYLING */
+/* MENU SECTION STYLING */
   .menu-section {
     background-color: #803208;
     color: #ffffff;
@@ -280,26 +250,34 @@ input[type=checkbox]{
     padding-bottom: 10px;
   }
 
-
-  /* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-    background-color: #000000;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 18px;
+  .strain13 {
     width: 100%;
-    text-align: center;
-    font-size: 32px;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    font-family: 'Abril_Fatface';
+    height: auto;
+    padding: 10px;
+    position: left;
   }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #000000;
+
+  .mulesauce {
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    position: left;
   }
+
+/* STYLING FOR BUTTONS THAT OPEN & CLOSE ACCORDIAN */
+    .accordion {
+        background-color: #000000;
+        color: #ffffff;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        font-family: 'Oswald';
+    }
   
   /* Style the accordion panel. Note: hidden by default */
   .panel {
