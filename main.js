@@ -18,21 +18,6 @@ function toggleMenu() {
 toggle.addEventListener("click", toggleMenu, false);
 
 
-/* CLOSE SUBMENU FROM ANYWHERE */
-function closeSubmenu(e) {
-  if (menu.querySelector(".submenu-active")) {
-    let isClickInside = menu
-      .querySelector(".submenu-active")
-      .contains(e.target);
-    if (!isClickInside && menu.querySelector(".submenu-active")) {
-      menu.querySelector(".submenu-active").classList.remove("submenu-active");
-    }
-  }
-}
-/* EVENT LISTENER */
-document.addEventListener("click", closeSubmenu, false);
-
-
 var acc = document.getElementsByClassName("accordion");
 var i;
 
