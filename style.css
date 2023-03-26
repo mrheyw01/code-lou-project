@@ -38,6 +38,21 @@ h3 {
     font-family: 'Oswald';
 }
 
+footer {
+    color: #ffffff;
+    font-family: 'Montserrat';
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.footer {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
 /* BASIC CSS UTILITIES FOR HEADER/ NAVBAR */
 * {
     box-sizing: border-box;
@@ -62,6 +77,7 @@ a {
 }
 .item {
     padding: 10px;
+    font-family: 'Montserrat';
 }
 .item.button {
     padding: 9px 5px;
@@ -97,6 +113,7 @@ a {
     width: 100%;
     text-align: center;
     display: none;
+    font-family: 'Montserrat';
 }
 .active .item {
     display: block;
