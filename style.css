@@ -115,16 +115,18 @@ a {
 .item.button {
     order: 2;
 }
-.item {
+.list {
     order: 3;
     width: 100%;
     text-align: center;
     display: none;
     font-family: 'Montserrat';
 }
-.active .item {
+
+.active .list {
     display: block;
 }
+
 .button.secondary { /* DIVIDER BETWEEN BUTTONS AND MENU LINKS (IF NEEDED) */
     border-bottom: 1px #444 solid;
 }
@@ -315,4 +317,16 @@ a {
     background-color: #803208;
     display: none;
     overflow: hidden;
+  }
+
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 25px;
+    color: #ffffff;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
