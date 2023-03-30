@@ -82,15 +82,15 @@ a {
     padding: 7.5px 10px 7.5px 10px;
     font-family: 'Oswald';
 }
-.item {
+.list {
     padding: 10px;
     font-family: 'Montserrat';
 }
-.item.button {
+.list.button {
     padding: 9px 5px;
 }
-.item:not(.button) a:hover,
-.item a:hover::after {
+.list:not(.button) a:hover,
+.list a:hover::after {
     color: #ccc;
 }
 
@@ -189,7 +189,7 @@ a {
     .logo {
         order: 0;
     }
-    .item {
+    .list {
         order: 1;
         position: relative;
         display: block; 
